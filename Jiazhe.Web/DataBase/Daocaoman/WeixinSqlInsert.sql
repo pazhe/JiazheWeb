@@ -1,0 +1,1 @@
+insert into weixinApp values(1,'ÄÏ²ý¼Î†´','wxac7fa4983c2a4986','a6e6dc2bd21c43d94f837cbf6a5a7bac','123456','mI3Clys2lCCtrPZfRDQajOHUFvLMYeywPlpAXHmi26y',default,default,default)
