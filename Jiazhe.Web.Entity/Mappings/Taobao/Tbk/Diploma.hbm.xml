@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <!--name:(命名空间.类名，程序集名)，table:(数据库表名)-->
+  <class name="Jiazhe.Web.Entity.Taobao.Tbk.Diploma,Jiazhe.Web.Entity" table="TB_tbk_diploma" lazy="false">
+    <id name="DId" column="dId">
+      <generator class="native"/>
+    </id>
+    <property name="CId" column="cId"/>
+    <property name="AppUrl" column="appUrl"/>
+    <property name="AppKey" column="appKey"/>
+    <property name="AppSecret" column="appSecret"/>
+  </class>
+</hibernate-mapping>

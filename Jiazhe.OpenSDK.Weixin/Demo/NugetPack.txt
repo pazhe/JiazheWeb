@@ -1,0 +1,21 @@
+﻿STEP 3：设置API Key
+使用以下命令设置NuGet API Key：
+nuget setApiKey oy2ajuohne37y4d62otqkbhfbnzfbhzutnjucdvcr4urre
+STEP 4：开发自己的类库（Class Library）
+STEP 5：产生并修改nuspec
+nuspec是NuGet将项目打包成nupkg的输入文件，可以通过nuget spec命令产生。在命令提示符下，进入DaxnetNugetTest.csproj文件所在目录，然后执行：
+nuget spec
+用notepad打开DaxnetNugetTest.nuspec文件，把需要替换的信息替换掉，不需要的tag全部删掉，注意里面的$xxx$宏，这些就是引用了AssemblyInfo.cs中的设置值，在编译产生package的时候，会使用AssemblyInfo.cs中的相应值进行替换。完成编辑后，我们的nuspec文件如下：
+注意两点：1、$description$使用AssemblyDescriptionAttribute的值进行替换，在产生package之前，一定要记得先编译项目，否则会提示$description$找不到的错误；2、releaseNotes如果没有，就直接删掉这个节点，如果有，则填入自己的内容，不要使用默认内容，否则会在下一步产生警告信息。
+STEP 6：产生类库包（Library Package）
+同样在DaxnetNugetTest.csproj路径下，使用下面的命令产生NuGet类库包：
+
+nuget pack Jiazhe.OpenSDK.Weixin.csproj
+
+另外，NuGet会使用默认的项目配置所产生的程序集进行打包。如果项目默认是Debug，而你需要用Release打包，则使用下面的命令：
+nuget pack Jiazhe.OpenSDK.Weixin.csproj -Prop Configuration=Release
+
+STEP 7：发布类库包
+
+现在，通过以下命令发布类库包
+nuget push Jiazhe.OpenSDK.Weixin.1.0.0.nupkg

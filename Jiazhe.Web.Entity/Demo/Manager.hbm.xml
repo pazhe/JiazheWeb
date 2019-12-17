@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <!--name:(命名空间.类名，程序集名)，table:(数据库表名)-->
+  <class name="VO.ManagersVO,Jiazhe.Web.Entity" table="Managers" lazy="false">
+    <id name="MID" column="mID">
+			<generator class="native"/>
+		</id>
+		<property name="MName" column="mName"/>
+		<property name="MPassword" column="mPassword"/>
+  </class>
+</hibernate-mapping>

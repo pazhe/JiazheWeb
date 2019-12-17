@@ -1,0 +1,13 @@
+﻿.hdr, .tk_rate, .coupon_info {
+    vertical-align: middle;
+    text-align: center;
+}
+
+    .tk_rate p {
+        width: 100%;
+        height: 45px;
+        display: block;
+        line-height: 45px;
+        text-align: center;
+    }
+/*淘宝客产品展示 End TaobaokeItemsDetails.aspx*/

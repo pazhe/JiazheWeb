@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E7CEF5B-80AB-49E5-A60B-482E9FE9E69E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jiazhe.Web.IDAL</RootNamespace>
+    <AssemblyName>Jiazhe.Web.IDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Demo\DemoProductIdao.cs" />
+    <Compile Include="Demo\IdaoFather.cs" />
+    <Compile Include="Demo\ManagerIDao.cs" />
+    <Compile Include="Nhibernate\IdaoFather.cs" />
+    <Compile Include="Owner\ConsumerIdao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taobao\Tbk\DiplomaIdao.cs" />
+    <Compile Include="Taobao\Tbk\FavoriteItemIdao.cs" />
+    <Compile Include="Taobao\Tbk\FavoritesIdao.cs" />
+    <Compile Include="Weixin\WeixinBaseConfigureIdao.cs" />
+    <Compile Include="Weixin\WeixinPublicSettingIdao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jiazhe.Web.Entity\Jiazhe.Web.Entity.csproj">
+      <Project>{8e525899-e953-42fe-a1c6-2460d39d9ad5}</Project>
+      <Name>Jiazhe.Web.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

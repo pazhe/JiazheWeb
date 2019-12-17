@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Jiazhe.Web.Entity" namespace="Jiazhe.Web.Entity.Weixin">
+  <class name="WeixinBaseConfigure" table="WeixinBaseConfigure" lazy="false">
+
+
+    <id name="WxcId" column="wxcId">
+      <generator class="native"/>
+    </id>
+
+    <property name="WxId" column="wxId"/>
+    <property name="WxAppId" column="wxAppId"/>
+    <property name="WxAppSecret" column="wxAppSecret"/>
+    <property name="WxServicesUrl" column="wxServicesUrl"/>
+    <property name="WxServerToken" column="wxServerToken"/>
+
+    <property name="WxEncodingAESKey" column="wxEncodingAESKey"/>
+    <property name="WxEncodingType" column="wxEncodingType"/>
+    <property name="WxIsFlag" column="wxIsFlag"/>
+    <property name="WxBeginDate" column="wxBeginDate"/>
+    <property name="WxStopDate" column="wxStopDate"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Jiazhe.Web.Entity" namespace="Jiazhe.Web.Entity.Weixin">
+  <class name="WeixinPublicSetting" table="WeixinPublicSetting" lazy="false">
+<id name="WxId" column="wxId">
+  <generator class="native"/>
+</id>
+
+<property name="CId" column="cId"/>
+<property name="WxName" column="wxName"/>
+<property name="WxNumber" column="wxNumber"/>
+<property name="WxType" column="wxType"/>
+
+<property name="WxEmali" column="wxEmali"/>
+<property name="WxOriginalId" column="wxOriginalId"/>
+</class>
+</hibernate-mapping>

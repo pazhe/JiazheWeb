@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+  <description>
+    Definitions for the NHibernate Objects.
+  </description>
+  <!-- Database and NHibernate Configuration这下面是配置使用Nhibernate -->
+  <!--链接字符串-->
+  <db:provider id="DbProvider"  provider="SqlServer-2.0" connectionString="database=JiazheWebDataBase;uid=sa;pwd=123456;server=.;"/>
+  <!--<db:provider id="DbProvider"  provider="SqlServer-2.0" connectionString="database=qds214274525_db;uid=qds214274525;pwd=tianxiao;server=qds214274525.my3w.com;"/>-->
+  <!--<db:provider id="DbProvider"  provider="SqlServer-2.0" connectionString="database=DreamWorkXYD;uid=sa;pwd=Tianxiao521;server=42.96.191.205;"/>-->
+  <!--SessionFactory 配置-->
+  <object id="SessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate32">
+    <property name="DbProvider" ref="DbProvider" />
+    <property name="MappingAssemblies">
+      <list>
+        <!--这是配置嵌入资源的xx类对应的xx.hbm.xml文件所在的项目名称-->
+        <value>Jiazhe.Web.Entity</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="connection.provider" value="NHibernate.Connection.DriverConnectionProvider" />
+        <entry key="dialect" value="NHibernate.Dialect.MsSql2008Dialect" />
+        <entry key="connection.driver_class" value="NHibernate.Driver.SqlClientDriver" />
+        <entry key="show_sql" value="true" />
+      </dictionary>
+    </property>
+  </object>
+
+</objects>

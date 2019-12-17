@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>..\Images\Banners\70x880\1.jpg</ImageUrl>
+    <NavigateUrl>#</NavigateUrl>
+    <AlternateText>女性魅力 国色天香</AlternateText>
+    <Keyword>女性魅力 国色天香</Keyword>
+    <Impressions>50</Impressions>
+    <StartDate>2007/06/27</StartDate>
+    <EndDate>2007/06/27</EndDate>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>..\Images\Banners\70x880\2.jpg</ImageUrl>
+    <NavigateUrl>#</NavigateUrl>
+    <AlternateText>全场包邮</AlternateText>
+    <Keyword>全场包邮</Keyword>
+    <Impressions>30</Impressions>
+    <StartDate>2007/06/27</StartDate>
+    <EndDate>2007/06/27</EndDate>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>..\Images\Banners\70x880\3.jpg</ImageUrl>
+    <NavigateUrl>#</NavigateUrl>
+    <AlternateText>玩美女人 甜美mix小性感</AlternateText>
+    <Keyword>玩美女人 甜美mix小性感</Keyword>
+    <Impressions>80</Impressions>
+    <StartDate>2007/06/27</StartDate>
+    <EndDate>2007/06/27</EndDate>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>..\Images\Banners\70x880\4.png</ImageUrl>
+    <NavigateUrl>#</NavigateUrl>
+    <AlternateText>护肤彩妆全攻略！</AlternateText>
+    <Keyword>护肤彩妆全攻略！</Keyword>
+    <Impressions>50</Impressions>
+    <StartDate>2007/06/27</StartDate>
+    <EndDate>2007/06/27</EndDate>
+  </Ad>
+</Advertisements>
+

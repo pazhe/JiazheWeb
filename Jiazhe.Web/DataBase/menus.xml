@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet  type="text/xsl" href="1.xsl"?>
+<menus>
+  <menuItems name="首页" url="../index.aspx" />
+  <menuItems name="免费试用" url="../default.aspx" />
+  <menuItems name="闪电试用" url="../default.aspx" />
+  <menuItems name="试用报告" url="../default.aspx" />
+  <menuItems name="任务中心" url="../default.aspx" />
+  <menuItems name="淘宝网" url="../default.aspx" />
+  <menuItems name="聚划算" url="../default.aspx" />
+
+  <menusLeft>  </menusLeft>
+</menus>

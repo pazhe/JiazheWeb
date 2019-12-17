@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+  
+  <!--type指定“命名空间.类名,命名空间”，-->
+  <!--name必须与NHibernateDAO中的SessionFactory相同-->
+  
+  <description>
+    Definitions for the NHibernate Objects.
+    
+  </description>
+  <!--ioc 注入-->
+  <object id="managerDao" type="Jiazhe.Web.DAL.Demo.ManagerDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="managerBo" type="Jiazhe.Web.BLL.ManagerBO,Jiazhe.Web.BLL">
+    <property name="ManagerDao" ref="managerDao"/>
+  </object>
+
+  <!--Demo-->
+  <object id="DemoProductDao" type="Jiazhe.Web.DAL.Demo.DemoProductDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="DemoProductBo" type="Jiazhe.Web.BLL.Demo.DemoProductBo,Jiazhe.Web.BLL">
+    <property name="dao" ref="DemoProductDao"/>
+  </object>
+
+  <!--Consumer-->
+  <object id="ConsumerDao" type="Jiazhe.Web.DAL.Owner.ConsumerDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="ConsumerDaoFactory" type="Jiazhe.Web.FactoryDao.Owner.ConsumerFactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="ConsumerDao" ref="ConsumerDao"/>
+  </object>
+  <object id="ConsumerBo" type="Jiazhe.Web.BLL.Owner.ConsumerBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="ConsumerDaoFactory"/>
+  </object>
+  <object id="ConsumerBoFactory" type="Jiazhe.Web.FactoryBo.Owner.ConsumerFactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="ConsumerBo" ref="ConsumerBo"/>
+  </object>
+
+  <!--WeixinPublicSetting-->
+  <object id="WeixinPublicDao" type="Jiazhe.Web.DAL.Weixin.WeixinPublicSettingDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="WeixinPublicDaoFactory" type="Jiazhe.Web.FactoryDao.Weixin.WeixinPublicSettingFactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="WeixinPublicDao" ref="WeixinPublicDao"/>
+  </object>
+  <object id="WeixinPublicBo" type="Jiazhe.Web.BLL.Weixin.WeixinPublicSettingBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="WeixinPublicDaoFactory"/>
+  </object>
+  <object id="WeixinPublicBoFactory" type="Jiazhe.Web.FactoryBo.Weixin.WeixinPublicSettingFactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="WeixinPublicBo" ref="WeixinPublicBo"/>
+  </object>
+
+  <!--WeixinBaseConfigure-->
+  <object id="WeixinConfigureDao" type="Jiazhe.Web.DAL.Weixin.WeixinBaseConfigureDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="WeixinConfigureDaoFactory" type="Jiazhe.Web.FactoryDao.Weixin.WeixinBaseConfigureFactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="WeixinConfigureDao" ref="WeixinConfigureDao"/>
+  </object>
+  <object id="WeixinConfigureBo" type="Jiazhe.Web.BLL.Weixin.WeixinBaseConfigureBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="WeixinConfigureDaoFactory"/>
+  </object>
+  <object id="WeixinConfigureBoFactory" type="Jiazhe.Web.FactoryBo.Weixin.WeixinBaseConfigureFactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="WeixinConfigureBo" ref="WeixinConfigureBo"/>
+  </object>
+
+  <!--Favorites 淘宝客选品库-->
+  <object id="FavoritesDao" type="Jiazhe.Web.DAL.Taobao.Tbk.FavoritesDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="FavoritesDaoFactory" type="Jiazhe.Web.FactoryDao.Taobao.Tbk.FavoritesFactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="FavoritesDao" ref="FavoritesDao"/>
+  </object>
+  <object id="FavoritesBo" type="Jiazhe.Web.BLL.Taobao.Tbk.FavoritesBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="FavoritesDaoFactory"/>
+  </object>
+  <object id="FavoritesBoFactory" type="Jiazhe.Web.FactoryBo.Taobao.Tbk.FavoritesFactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="FavoritesBo" ref="FavoritesBo"/>
+  </object>
+
+  <!--Diploma 淘宝客API应用配置-->
+  <object id="DiplomaDao" type="Jiazhe.Web.DAL.Taobao.Tbk.DiplomaDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="DiplomaDaoFactory" type="Jiazhe.Web.FactoryDao.Taobao.Tbk.DiplomaFactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="DiplomaDao" ref="DiplomaDao"/>
+  </object>
+  <object id="DiplomaBo" type="Jiazhe.Web.BLL.Taobao.Tbk.DiplomaBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="DiplomaDaoFactory"/>
+  </object>
+  <object id="DiplomaBoFactory" type="Jiazhe.Web.FactoryBo.Taobao.Tbk.DiplomaFactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="DiplomaBo" ref="DiplomaBo"/>
+  </object>
+
+  <!--Diploma 淘宝客选品库产品-->
+  <object id="FavoriteItemDao" type="Jiazhe.Web.DAL.Taobao.Tbk.FavoriteItemDao,Jiazhe.Web.DAL">
+    <property name="SessionFactory" ref="SessionFactory" />
+  </object>
+  <object id="FactoryDao" type="Jiazhe.Web.FactoryDao.Taobao.Tbk.FactoryDao,Jiazhe.Web.FactoryDao">
+    <property name="FavoriteItemDao" ref="FavoriteItemDao"/>
+  </object>
+  <object id="FavoriteItemBo" type="Jiazhe.Web.BLL.Taobao.Tbk.FavoriteItemBo,Jiazhe.Web.BLL">
+    <property name="FactoryDao" ref="FactoryDao"/>
+  </object>
+  <object id="FavoriteItemBoFactory" type="Jiazhe.Web.FactoryBo.Taobao.Tbk.FactoryBo,Jiazhe.Web.FactoryBo">
+    <property name="FavoriteItemBo" ref="FavoriteItemBo"/>
+  </object>
+  
+</objects>

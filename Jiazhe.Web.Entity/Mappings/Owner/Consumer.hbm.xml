@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Jiazhe.Web.Entity" namespace="Jiazhe.Web.Entity.Owner">
+  <class name="Consumer" table="Consumer" lazy="false">
+    
+    <id name="CId" column="cId">
+      <generator class="native"/>
+    </id>
+    
+    <property name="LevelId" column="levelId"/>
+    <property name="CName" column="cName"/>
+    <property name="CPassword" column="cPassword"/>
+    <property name="CSex" column="cSex"/>
+
+    <property name="CRealName" column="cRealName"/>
+    <property name="CAlipay" column="cAlipay"/>
+    <property name="CTencent" column="cTencent"/>
+    <property name="CEmail" column="cEmail"/>
+
+    <property name="CIdenCard" column="cIdenCard"/>
+    <property name="CTelphone" column="cTelphone"/>
+    <property name="CDate" column="cDate"/>
+  </class>
+</hibernate-mapping>

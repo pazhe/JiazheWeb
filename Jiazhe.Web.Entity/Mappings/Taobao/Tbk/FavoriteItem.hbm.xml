@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <!--name:(命名空间.类名，程序集名)，table:(数据库表名)-->
+  <class name="Jiazhe.Web.Entity.Taobao.Tbk.FavoriteItem,Jiazhe.Web.Entity" table="TB_tbk_favoriteItem" lazy="false">
+    <id name="IId" column="iId">
+      <generator class="native"/>
+    </id>
+    <property name="CId" column="cId"/>
+    <property name="FavoritesId" column="favorites_id"/>
+    <property name="NumIid" column="num_iid"/>
+    <property name="Title" column="title"/>
+    <property name="PictUrl" column="pict_url"/>
+    <property name="SmallImages" column="small_images"/>
+    <property name="ReservePrice" column="reserve_price"/>
+    <property name="ZkFinalPrice" column="zk_final_price"/>
+    <property name="UserType" column="user_type"/>
+    <property name="Provcity" column="provcity"/>
+
+    <property name="ItemUrl" column="item_url"/>
+    <property name="ClickUrl" column="click_url"/>
+    <property name="Nick" column="nick"/>
+    <property name="SellerId" column="seller_id"/>
+    <property name="Volume" column="volume"/>
+    <property name="TkRate" column="tk_rate"/>
+    <property name="ZkFinalPriceWap" column="zk_final_price_wap"/>
+
+    <property name="ShopTitle" column="shop_title"/>
+    <property name="EventStartTime" column="event_start_time"/>
+    <property name="EventEndTime" column="event_end_time"/>
+    <property name="Type" column="type"/>
+    <property name="Status" column="status"/>
+    <property name="Category" column="category"/>
+    <property name="CouponClickUrl" column="coupon_click_url"/>
+
+    <property name="CouponEndTime" column="coupon_end_time"/>
+    <property name="CouponInfo" column="coupon_info"/>
+    <property name="CouponStartTime" column="coupon_start_time"/>
+    <property name="CouponTotalCount" column="coupon_total_count"/>
+    <property name="CouponRemainCount" column="coupon_remain_count"/>
+    <property name="Model" column="model"/>
+  </class>
+</hibernate-mapping>

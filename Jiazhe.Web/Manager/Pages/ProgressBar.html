@@ -1,0 +1,78 @@
+﻿<script language="javascript">
+    function SetPorgressBar(pos) {
+        //设置进度条居中
+
+        var screenWidth = document.body.offsetWidth;
+        ProgressBarSide.style.width = Math.round(screenWidth / 2) + "px";
+        ProgressBarSide.style.left = Math.round(screenWidth / 4) + "px";
+        ProgressBarSide.style.border = "1px solid";
+        ProgressBarSide.style.top = 100+"px";
+        ProgressBarSide.style.height = "21px";
+        ProgressBarSide.style.display = "block";
+
+        //ProgressBarSide1.style.width = Math.round(screenWidth / 2) + "px";
+        //ProgressBarSide1.style.left = Math.round(screenWidth / 4) + "px";
+        //ProgressBarSide1.style.border = "1px solid";
+        ////ProgressBarSide.style.top = "50px";
+        //ProgressBarSide1.style.height = "21px";
+        //ProgressBarSide1.style.display = "block";
+
+        //设置进度条百分比
+        ProgressBar.style.width = pos + "%";
+        ProgressText.innerHTML = pos + "%";
+
+        //ProgressBar1.style.width = pos + "%";
+        //ProgressText1.innerHTML = pos + "%";
+    }
+
+    function SetMaxValue(maxValue) {
+        ProgressBarSide.style.width = maxValue + "px";
+        //ProgressBarSide1.style.width = maxValue + "px";
+    }
+
+    //完成后隐藏进度条
+    function SetCompleted() {
+        ProgressBarSide.style.display = "none";
+        //ProgressBarSide1.style.display = "none";
+    }
+
+    function SetTitle(title) {
+        ProgressTitle.innerHTML = title;
+        //ProgressTitle1.innerHTML = title;
+    }
+    function SetHeader(header) {
+        ProgressHeader.innerHTML = header;
+        //ProgressHeader1.innerHTML = header;
+    }
+
+    function SetProgressBarWidth(width) {
+        ProgressBar.style.width = width + "%";
+        ProgressText.innerHTML = width + "%";
+        SetPorgressBar(width);
+        //ProgressHeader1.innerHTML = header;
+    }
+</script>
+
+<div id="ProgressBarSide" style="position: absolute; height: 21px; width: 100px;
+  color: Silver; border:0px solid; display: none;">
+    <div id="ProgressHeader" style="position: absolute; height: 21px; top: -21px; width: 100%;text-align: center">
+    </div>
+    <div id="ProgressBar" style="position: absolute; height: 21px; width: 0%; background-color: #1475BB">
+    </div>
+    <div id="ProgressText" style="position: absolute; height: 21px; width: 100%; text-align: center">
+    </div>
+    <div id="ProgressTitle" style="position: absolute; height: 21px; top: 21px; width: 100%;text-align: center">
+    </div>
+</div>
+
+<!--<div id="ProgressBarSide1" style="position: absolute; height: 21px; width: 100px;
+  color: Silver; border:0px solid; display: none; top:100px;">
+    <div id="ProgressHeader1" style="position: absolute; height: 21px; top: -21px; width: 100%;text-align: center">
+    </div>
+    <div id="ProgressBar1" style="position: absolute; height: 21px; width: 0%; background-color: #1475BB">
+    </div>
+    <div id="ProgressText1" style="position: absolute; height: 21px; width: 100%; text-align: center">
+    </div>
+    <div id="ProgressTitle1" style="position: absolute; height: 21px; top: 21px; width: 100%;text-align: center">
+    </div>
+</div>-->

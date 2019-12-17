@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <!--name:(命名空间.类名，程序集名)，table:(数据库表名)-->
+  <class name="Jiazhe.Web.Entity.Taobao.Tbk.Favorites,Jiazhe.Web.Entity" table="TB_tbk_favorites" lazy="false">
+    <id name="FId" column="fId">
+      <generator class="native"/>
+    </id>
+    <property name="CId" column="cId"/>
+    <property name="Type" column="type"/>
+    <property name="FavoritesId" column="favorites_id"/>
+    <property name="FavoritesTitle" column="favorites_title"/>
+    <property name="TotalResults" column="total_results"/>
+  </class>
+</hibernate-mapping>

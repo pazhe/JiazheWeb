@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+assembly:程序集名
+namespace：命名空间
+-->
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Jiazhe.Web.Entity" namespace="Jiazhe.Web.Entity.Demo">
+<!--name：类名，table：数据库表名-->
+  <class name="DemoProduct" table="Product" lazy="false" >
+
+    <id name="PId" column="pId" type="long" >
+      <!--序号自动递增-->
+      <generator class="native" />
+    </id>
+
+    <property name="PCode" type="string">
+      <!--编号-->
+      <column name="pCode" length="50"/>
+    </property>
+
+    <property name="PName" type="string">
+      <!--名称-->
+      <column name="pName" length="50"/>
+    </property>
+
+    <property name="PQuantityPerUnit" type="string">
+      <!--规格-->
+      <column name="pQuantityPerUnit" length="50"/>
+    </property>
+
+    <property name="PUnit" type="string">
+      <!--单位-->
+      <column name="pUnit" length="50"/>
+    </property>
+
+    <property name="PSellPrice" type="string">
+      <!--售价-->
+      <column name="pSellPrice" length="50"/>
+    </property>
+
+    <property name="PBuyPrice" type="string">
+      <!--进价-->
+      <column name="pBuyPrice" length="50"/>
+    </property>
+
+    <property name="PRemark" type="string">
+      <!--备注-->
+      <column name="pRemark" length="200"/>
+    </property>
+
+  </class>
+</hibernate-mapping>
