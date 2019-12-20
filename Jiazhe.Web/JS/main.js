@@ -146,7 +146,12 @@ function promo() {
         list.getElementsByClassName("mod")[index].style.display = 'block';
 
     }
+    function showClickImg(clickIndex, index) {
 
+        list.getElementsByClassName("mod")[index].style.display = 'none';
+        list.getElementsByClassName("mod")[clickIndex].style.display = 'block';
+
+    }
 
     //重复执行的定时器
     function play() {
@@ -200,6 +205,8 @@ function promo() {
         //从第1个开始添加on样式
         buttons[index].className = "on";
     }
+
+
     //将之前的小圆点的样式清除
     function showButtons() {
         //将之前的小圆点的样式清除
@@ -241,9 +248,9 @@ function promo() {
                 /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
                 /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
                 var clickIndex = parseInt(this.getAttribute('index'));
-                console.log("clickIndex:" + clickIndex);
-                var offset = 1500 * (index - clickIndex); //这个index是当前图片停留时的index
-                //showImg(index);
+                console.log("clickIndex:" + clickIndex + "index:" + index);
+               /* var offset = 1500 * (index - clickIndex);*/ //这个index是当前图片停留时的index
+                showClickImg(clickIndex,index);
                 index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
                 showButtons();
             }
@@ -282,120 +289,4 @@ function changeWidth(percentage,index, list) {
 
     //console.log("width:" + width + "---index:" + index + "---changeW:" + changeW + "---" + (width * index + (width - changeW) * index));
 
-}
-
-
-
-function cntopads($) {
-    var rsstatus = 0;
-    var bistatus = 0;
-    var bro = $.browser;
-    var hoverTimer, outTimer;
-    $('#ctads>div').stop(false, false).hover(
-        function () {
-            clearTimeout(outTimer);
-            hoverTimer = setTimeout(function () { mousee(); }, 300);
-        },
-        function () {
-            clearTimeout(hoverTimer);
-            outTimer = setTimeout(function () { unexpand(); }, 200);
-        }
-    );
-
-    $('#closeBigimg').click(function () {
-        clearTimeout(hoverTimer);
-        outTimer = setTimeout(function () { unexpand(); }, 200);
-    });
-    function mousee() {
-        if (bistatus == 0) loadBigImage();
-        if (bro.msie && bro.version == '8.0') {
-            $('#ctacover').css({ 'display': 'block', 'filter': 'alpha(opacity=100)' });
-            $('#ctabigImg').css({ 'display': 'block', 'filter': 'alpha(opacity=100)' });
-            $('#ctacover').css({ 'margin-top': '0px', 'background': '#000', 'display': 'none', 'filter': 'alpha(opacity=0)' });
-        } else {
-            $('#ctacover').css({ 'display': 'block', 'opacity': '0' });
-            $('#ctabigImg').animate({ 'opacity': 1 }, 500);
-            $('#ctacover').animate({ 'margin-top': '0px', 'background': '#000', 'opacity': '1' }, 500, function () {
-                $('#ctacover').css({ 'display': 'none' });
-            });
-        }
-        $('#ctabigImg').css({ 'display': 'block' });
-        $('#ctasImg').css({ 'background-image': "url('#')" });
-    }
-    function loadBigImage() {
-        var img = new Image();
-        img.src = 'https://images-cn.ssl-images-amazon.com/images/G/28/CN-Ad/dove20191206_820460._CB446405653_.jpg';
-        img.onload = function () {
-            $('#ctabigImgCon').css({ 'background': "url('https://images-cn.ssl-images-amazon.com/images/G/28/CN-Ad/dove20191206_820460._CB446405653_.jpg') no-repeat center" });
-            if (bro.msie && bro.version == '8.0') {
-                $('#ctabigImgCon').css({ 'filter': 'alpha(opacity=100)' });
-            } else {
-                $('#ctabigImgCon').css({ 'opacity': 1 });
-            }
-            bistatus = 1;
-        }
-    }
-    $(window).load(function () {
-        if (bistatus == 0)
-            loadBigImage();
-    });
-    function unexpand() {
-        if (bro.msie && bro.version == '8.0') {
-            $('#ctacover').css({ 'display': 'block', 'filter': 'alpha(opacity=100)' });
-            $('#ctacover').css({ 'margin-top': '-460px', 'filter': 'alpha(opacity=0)' });
-            $('#ctabigImg').css({ 'display': 'none', 'filter': 'alpha(opacity=0)' });
-        } else {
-            $('#ctacover').css({ 'display': 'block', 'margin-top': '-460px', 'opacity': '0' });
-            //$('#ctacover').animate({'margin-top':'-460px','opacity':'0'},500,function(){
-            $('#ctabigImg').css({ 'display': 'none', 'opacity': 0 });
-            //});
-            //$('#ctabigImg').animate({'opacity':0});
-        }
-        $('#ctasImg').css({ 'background-image': "url('https://images-cn.ssl-images-amazon.com/images/G/28/CN-Ad/dove20191206_82030._CB446405653_.jpg')" });
-    }
-    $(window).resize(function () {
-        resize();
-    });
-    function getScrollBarWidth() {
-        var __scrollBarWidth;
-        var scrollBarHelper = document.createElement("div");
-        scrollBarHelper.style.cssText = "overflow:scroll;width:100px;height:100px;";
-        document.body.appendChild(scrollBarHelper);
-        if (scrollBarHelper) {
-            __scrollBarWidth = {
-                horizontal: scrollBarHelper.offsetHeight - scrollBarHelper.clientHeight,
-                vertical: scrollBarHelper.offsetWidth - scrollBarHelper.clientWidth
-            };
-        }
-        document.body.removeChild(scrollBarHelper);
-        return __scrollBarWidth.vertical;
-    }
-    var scrollBarWidth = getScrollBarWidth();
-
-    resize();
-    function resize() {
-        var screewidth = $(window).width();
-        if (screewidth > 1010) {
-            $('#ctabigImg').css({ 'width': '820px', 'left': (screewidth - 820) / 2 + 'px' });
-            $('#ctasImg').css({ 'width': screewidth - 320 + 'px', 'left': '168px' });
-            $('#ctabigImgCon').css({ 'width': '820px' });
-        } else {
-            $('#ctabigImg').css({ 'width': '680px', 'left': '160px' });
-            $('#ctasImg').css({ 'width': '680px', 'left': '160px' });
-            $('#ctabigImgCon').css({ 'width': '680px' });
-        }
-    }
-    $('body').css({ 'overflow-x': 'hidden' });
-
-}
-if (typeof P !== 'undefined') {
-    P.when('A').execute(function (A) {
-        var $ = A.$;
-        cntopads($);
-    });
-} else if (typeof amznJQ !== 'undefined') {
-    amznJQ.available('jQuery', function () {
-        var $ = jQuery;
-        cntopads($);
-    });
 }
