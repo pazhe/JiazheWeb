@@ -167,23 +167,16 @@ function promo() {
 
     ///设置初始默认宽度
     function setDefaultWidth() {
-
-        //变量赋值
-        percentage = mainInner.offsetWidth / main.offsetWidth;
-        width = parseInt((main.offsetWidth * percentage) - 200 - 280-170);
-
-        //设置core百分比
-        core.style.width = width / (main.offsetWidth * percentage) * 100 + "%";
-        //设置promo尺寸
-        promo.style.width = width + "px";
-        //设置图片尺寸
-        for (var i = 0; i < 7; i++) {
-            img[i].style.width = width + "px";
-        }
-        //设置left尺寸
-        list.style.left = "-" + width + "px";
-
-        console.log(mainInner.offsetWidth / main.offsetWidth);
+        var core = document.getElementById("core");
+        var maxWidth;
+        var main = document.getElementById("main");
+        var mainInner = document.getElementById("main-inner");
+        var percentage = (mainInner.offsetWidth / main.offsetWidth).toFixed(2);
+        var timer = setInterval(function () {
+            maxWidth = document.body.offsetWidth;
+            core.style.maxWidth = maxWidth * percentage - 200 - 270 + "px";
+        }, 50)
+        console.log(percentage);
     }
 
     // NEXT 之后 将之前的小圆点的样式清除
@@ -262,7 +255,7 @@ function promo() {
     promo.onmouseout = play;
 
     //下面执行顺序
-    //setDefaultWidth();
+    setDefaultWidth();
     play();
     //console.log(buttons.length);
     

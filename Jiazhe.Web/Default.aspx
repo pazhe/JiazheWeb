@@ -49,7 +49,7 @@
                     <div class="tbh-tmall J_Module"><%--轮播下面广告--%><uc:J_Tmall runat="server" id="J_Tmall" /></div>
                 </div>
                 <div class="sub-column" style="display:none;">中间旁边广告</div>
-                <div class="col-right" style="display:none;" >右侧模块</div>
+                <div class="col-right" style="display:block;" >右侧模块</div>
             </div>
         </div>
         
