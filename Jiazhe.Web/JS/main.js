@@ -118,10 +118,6 @@ function promo() {
     var next = document.getElementById('promo-next');
     var buttons = document.getElementById('promo-buttons').getElementsByTagName('li');
     var timerHandler = 5000;
-    //var main = document.getElementById("main");
-    //var mainInner = document.getElementById("main-inner");
-    //var promo = document.getElementById("promo");
-    //var img = document.getElementById("promo-list").getElementsByTagName("img");
 
     var index = 0;
     var timer;
@@ -129,7 +125,8 @@ function promo() {
     //var percentage;
 
     //设置显示的图片 index 从1开始传过来
-    function showImg(index) {
+    function showNextImg(index) {
+        
         if (index > 0) {
             list.getElementsByClassName("mod")[index - 1].style.display = 'none';
         }
@@ -138,6 +135,18 @@ function promo() {
         }
         list.getElementsByClassName("mod")[index].style.display = 'block';
     }
+    function showPrevImg(index) {
+        console.log("index:" + index);
+        if (index < buttons.length - 1) {
+            list.getElementsByClassName("mod")[index + 1].style.display = 'none';
+        } else {
+            list.getElementsByClassName("mod")[0].style.display = 'none';
+        }
+
+        list.getElementsByClassName("mod")[index].style.display = 'block';
+
+    }
+
 
     //重复执行的定时器
     function play() {
@@ -145,10 +154,10 @@ function promo() {
         timer = setInterval(function () {
             next.onclick();
         },timerHandler)
-        //timer1 = setInterval(function () {
-        //    changeWidth(percentage,index, list);
-        //}, 100)
-
+    }
+    //清除定时器
+    function stop() {
+        clearInterval(timer);
     }
 
     ///设置初始默认宽度
@@ -172,13 +181,8 @@ function promo() {
         console.log(mainInner.offsetWidth / main.offsetWidth);
     }
 
-    //清除定时器
-    function stop() {
-        clearInterval(timer);
-    }
-
     // NEXT 之后 将之前的小圆点的样式清除
-    function showButtons() {
+    function showNextButtons() {
         //index 从1开始计算，故 -1 清除 第0个开始
         if (index > 0)
             buttons[index - 1].className = "";
@@ -187,14 +191,35 @@ function promo() {
         //从第1个开始添加on样式
         buttons[index].className = "on";
     }
+    function showPrevButtons() {
+        //index 从1开始计算，故 -1 清除 第0个开始
+        if (index < buttons.length - 1)
+            buttons[index + 1].className = "";
+        else
+            buttons[0].className = "";
+        //从第1个开始添加on样式
+        buttons[index].className = "on";
+    }
+    //将之前的小圆点的样式清除
+    function showButtons() {
+        //将之前的小圆点的样式清除
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].className == "on") {
+                buttons[i].className = "";
+            }
+        }
+        //数组从0开始，故index需要-1
+        buttons[index].className = "on";
+    }
 
     prev.onclick = function () {
         index -= 1;
-        if (index < 1) {
-            index = 6
+        if (index < 0) {
+            index = buttons.length - 1
         }
-        buttonsShow();
-        animate(1500);
+        showPrevImg(index);
+        //showPrevButtons();
+        showButtons()
     };
     next.onclick = function () {
 
@@ -204,20 +229,23 @@ function promo() {
         if (index > buttons.length-1) {
             index = 0
         }
-        showImg(index);
-        showButtons();
+        showNextImg(index);
+        //showNextButtons();
+        showButtons()
     };
 
     for (var i = 0; i < buttons.length; i++) {
         (function (i) {
             buttons[i].onclick = function () {
+                console.log(i+"被点击");
                 /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
                 /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
                 var clickIndex = parseInt(this.getAttribute('index'));
+                console.log("clickIndex:" + clickIndex);
                 var offset = 1500 * (index - clickIndex); //这个index是当前图片停留时的index
-                animate(offset);
+                //showImg(index);
                 index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
-                buttonsShow();
+                showButtons();
             }
         })(i)
     }
@@ -229,7 +257,7 @@ function promo() {
     //下面执行顺序
     //setDefaultWidth();
     play();
-    console.log(buttons.length);
+    //console.log(buttons.length);
     
 }
 

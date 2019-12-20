@@ -37,7 +37,7 @@
 	<div class="promo-bd cc-lm-tcgShowContainer" id="promo-list">   
 		<div class="promo-list" id="cc-lm-tcgShowImgContainer promo-list">
 
-		    <div class="cc-lm-tcgImgItem mod" style="display: block; background-color: rgb(255, 255, 255);">
+		    <div class="cc-lm-tcgImgItem mod" style="display: block;opacity: 1;">
 	            <a href="#" aria-label="Click here to view detail" target="_blank">
                     <img src="../Images/Banners/1500x300/1.jpg" alt="click to view detail">
 	            </a> 
@@ -92,11 +92,11 @@
 	<div class="promo-ft a-all" style="position:relative;top: -300px;background-color:transparent;font-size:0;height:0;overflow:visible;">
         <div class="showAds"><span>广告</span></div>
         <div class="promo-opt J_PromoOpt a-all sld-ft-opt">
-		<div style="position:absolute; top: 110px; left: -0.5px; display: block; width: 60px; height:80px;" id="cc-lm-prevItem">
+		<div style="position:absolute; top: 130px; left: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-prevItem">
             <a id="promo-prev" class="J_Prev prev a-all"><i class="s-prev tb-ifont"></i></a>
 		</div>
 
-		<div style="position:absolute; top: 110px; right: -0.5px; display: block; width: 60px; height:80px;" id="cc-lm-nextItem">
+		<div style="position:absolute; top: 130px; right: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-nextItem">
             <a id="promo-next" class="J_Next next a-all"><i class="s-next tb-ifont"></i></a>
 		</div>
         </div>

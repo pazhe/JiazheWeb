@@ -16,6 +16,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Styles/Css/Default/Default.css" type="text/css" rel="stylesheet" />
     <link href="Styles/Css/Default/Controls.css" type="text/css" rel="stylesheet" />
+
+    <script src="JS/jquery/jquery.signalR-1.1.4.min.js" type="text/javascript"></script>
+    <script src="JS/jquery/jquery.lazyload.js" type="text/javascript"></script>
     <script src="JS/main.js" type="text/javascript"></script>
     <title></title>
 </head>
@@ -45,8 +48,8 @@
                     </div>
                     <div class="tbh-tmall J_Module"><%--轮播下面广告--%><uc:J_Tmall runat="server" id="J_Tmall" /></div>
                 </div>
-                <div class="sub-column" style="display:block;">中间旁边广告</div>
-                <div class="col-right" style="display:block;" >右侧模块</div>
+                <div class="sub-column" style="display:none;">中间旁边广告</div>
+                <div class="col-right" style="display:none;" >右侧模块</div>
             </div>
         </div>
         

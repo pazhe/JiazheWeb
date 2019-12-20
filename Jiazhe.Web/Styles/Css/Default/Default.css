@@ -37,6 +37,11 @@ li {
     margin: 0 auto;
     position: relative;
 }
+
+img {
+    /* 图片变成黑白色*/
+    -webkit-filter: grayscale(0);
+}
 /*设置链接样式*/
 a{text-decoration: none;outline: none;cursor: pointer; color:black}
 a:focus {outline: none;}

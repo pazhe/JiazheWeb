@@ -372,42 +372,42 @@ display:inline;*/
     overflow: hidden;
     position: relative;
 }
-    .promo .promo-bd .promo-list {
-        margin: auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        width: auto;
-        height: 100%;
+.promo .promo-bd .promo-list {
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
 
-        /*transform: translate3d(-700px, 0px, 0px);*/
-        /*position: absolute;
-        overflow: hidden;
-        width: 4900px;
-        transition-duration: 0.3s;
-        backface-visibility: hidden;
-        opacity: 1;*/
-    }
-        .promo .promo-bd .promo-list .mod {
-            position: absolute;
-            top: 0px;
-            height: 100%;
-            width: 3600px;
-            left: 50%;
-            margin-left: -1800px;
-            text-align: center;
-            background-position: center;
-            background-repeat: no-repeat;
+    /*transform: translate3d(-700px, 0px, 0px);*/
+    /*position: absolute;
+    overflow: hidden;
+    width: 4900px;
+    transition-duration: 0.3s;
+    backface-visibility: hidden;
+    opacity: 1;*/
+}
+.promo .promo-bd .promo-list .mod {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 3600px;
+    left: 50%;
+    margin-left: -1800px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
 
-            /*position:absolute;*/
-            /*width: 700px;*/
+    /*position:absolute;*/
+    /*width: 700px;*/
             
-            /*height: 100%;
-            float: left;
-            overflow: visible;
-            display: block;*/
-        }
+    /*height: 100%;
+    float: left;
+    overflow: visible;
+    display: block;*/
+}
 .promo .promo-bd img {
     /*display: block;
     float: left;
@@ -420,12 +420,12 @@ display:inline;*/
 .sld-ft-nav {
     border-radius: 10px;
     position: absolute;
-    /*bottom: 15px;*/
+    bottom: -265px;
     height: 13px;
     text-align: center;
     font-size: 0;
     left: 50%;
-    margin-left: -39px;
+    margin-left: -56px;
     background-color: rgba(255,255,255,.3);
 }
 .sld-ft-nav li {
@@ -445,7 +445,7 @@ display:inline;*/
 }
 .sld-ft-opt a {
     position: absolute;
-    top: 50%;
+    /*top: 50%;*/
     background-color: rgba(0,0,0,.3);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4d000000', GradientType=0);
 }
