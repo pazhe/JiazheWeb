@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="J_Promo.ascx.cs" Inherits="Jiazhe.Web.Controls.J_Promo" %>
-<div id="promo" class="gw-critical-content" style="margin-top: 0px; margin-left: 10px;">
+<div id="promo" class="gw-critical-content promo" style="margin-top: 0px; margin-left: 0px;">
 
-	<style>
+<%--	<style>
 <!--
 .cc-lm-tcgShowContainer {font-size: 13px;font-family: arial,helvetica,sans-serif;font-weight: normal;text-decoration: none;zoom: 1;}
 .cc-lm-tcgShowContainer {margin: 0px; width:auto; overflow:hidden; position:relative;}
 .cc-lm-tcgShowContainer img{border:0;}
 
-#cc-lm-tcgShowImgContainer {margin:auto; position: relative; top:0; left:0; overflow:hidden;width:auto;height:100%;}
+.cc-lm-tcgShowImgContainer {margin:auto; position: relative; top:0; left:0; overflow:hidden;width:auto;height:100%;}
 .cc-lm-tcgImgItem {position:absolute; top:0px;height:100%;width:3600px;left:50%; margin-left:-1800px; text-align:center;background-position:center;background-repeat:no-repeat;}
 
 #cc-lm-tcgShowIndicatorContainer {width:auto; height:3px;position:relative;}
@@ -32,7 +32,7 @@
 .cc-lm-tcgShowAdsIndicatorClass {position:absolute;bottom:10px;right:6px;height:10px;width:30px;z-index:50;color:black;}
 -->
 #adv-float-div {PADDING:1px 1px 0px 1px;FONT-SIZE:12px;Z-INDEX:300;BACKGROUND:#b2b2b2;FLOAT:right;OVERFLOW:hidden;WIDTH:30px;RIGHT:0px;TOP:162px;text-align:center;POSITION:fixed;color:white;display:none;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;font-family:'Noto Sans'}
-</style>
+</style>--%>
 
 	<div class="promo-bd cc-lm-tcgShowContainer" id="promo-list">   
 		<div class="promo-list" id="cc-lm-tcgShowImgContainer promo-list">
@@ -89,27 +89,27 @@
 		
 	</div>
 
-	<div class="promo-ft a-all" style="position:relative;top: -300px;background-color:transparent;font-size:0;height:0;overflow:visible;">
+	<div class="promo-ft a-all" style="position:relative;top: -300px;background-color:transparent;height:0;overflow:visible;">
         <div class="showAds"><span>广告</span></div>
         <div class="promo-opt J_PromoOpt a-all sld-ft-opt">
-		<div style="position:absolute; top: 130px; left: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-prevItem">
-            <a id="promo-prev" class="J_Prev prev a-all"><i class="s-prev tb-ifont"></i></a>
-		</div>
+		    <div style="position:absolute; top: 130px; left: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-prevItem">
+                <a id="promo-prev" class="J_Prev prev a-all"><i class="s-prev tb-ifont"></i></a>
+		    </div>
 
-		<div style="position:absolute; top: 130px; right: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-nextItem">
-            <a id="promo-next" class="J_Next next a-all"><i class="s-next tb-ifont"></i></a>
-		</div>
+		    <div style="position:absolute; top: 130px; right: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-nextItem">
+                <a id="promo-next" class="J_Next next a-all"><i class="s-next tb-ifont"></i></a>
+		    </div>
         </div>
 
         <ul id="promo-buttons" class="promo-nav sld-ft-nav">
-            <li index="0"  class="on" ><a>0</a></li>
-            <li index="1"><a>1</a></li>
-            <li index="2"><a>2</a></li>
-            <li index="3"><a>3</a></li>
-            <li index="4"><a>4</a></li>
-            <li index="5"><a>5</a></li>
-            <li index="6"><a>6</a></li>
-            <li index="7"><a>7</a></li>
+            <li index="0"  class="on" ><a></a></li>
+            <li index="1"><a></a></li>
+            <li index="2"><a></a></li>
+            <li index="3"><a></a></li>
+            <li index="4"><a></a></li>
+            <li index="5"><a></a></li>
+            <li index="6"><a></a></li>
+            <li index="7"><a></a></li>
         </ul>
 	</div>  	
     

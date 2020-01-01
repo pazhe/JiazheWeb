@@ -151,6 +151,7 @@
     <Content Include="Images\Loading\grey-52.gif" />
     <Content Include="Images\Logo\logo.png" />
     <Content Include="Images\Other\code.png" />
+    <Content Include="Images\Other\tmall-244-44.png" />
     <Content Include="JS\Icon\iconfont.js" />
     <None Include="JS\jquery\jquery-1.6.4-vsdoc.js" />
     <Content Include="JS\jquery\jquery-1.6.4.js" />

@@ -174,7 +174,7 @@ function promo() {
         var percentage = (mainInner.offsetWidth / main.offsetWidth).toFixed(2);
         var timer = setInterval(function () {
             maxWidth = document.body.offsetWidth;
-            core.style.maxWidth = maxWidth * percentage - 200 - 270 + "px";
+            core.style.maxWidth = maxWidth * percentage - 200 - 280 + "px";
         }, 50)
         console.log(percentage);
     }
@@ -236,7 +236,7 @@ function promo() {
 
     for (var i = 0; i < buttons.length; i++) {
         (function (i) {
-            buttons[i].onclick = function () {
+            buttons[i].onmouseover = function () {
                 console.log(i+"被点击");
                 /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
                 /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/

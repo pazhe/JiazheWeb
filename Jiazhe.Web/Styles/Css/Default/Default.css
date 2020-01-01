@@ -2,6 +2,7 @@
 body, ul, li, p, button, input, select, textarea {
     font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
 }
+address, cite, dfn, em, var {font-style: normal;}
 
 /*设置边距*/
 blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
@@ -10,43 +11,22 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 }
 
 /*设置背景颜色*/
-body {
-    background-color: #f4f4f4;
-    min-height: 490px;
-    margin-top: 0px;
-    position: relative;
-}
+body { background-color: #f4f4f4; min-height: 490px; margin-top: 0px; position: relative; }
+div{ /*margin:0 auto;*/ display: block; overflow:hidden; }
 
+ol, ul {list-style: none}
+li { float: left;}
+.h { color: #ff5000 !important;}
+.bd { width: 75%; margin: 0 auto; position: relative;}
 
-div{
-    margin:0 auto;
-    display: block;
-    overflow:hidden;
-}
-ol, ul {
-    list-style: none
-}
-li {
-    float: left;
-}
-.h {
-    color: #ff5000 !important;
-}
-.bd {
-    width: 85%;
-    margin: 0 auto;
-    position: relative;
-}
+/* 图片变成黑白色*/
+img { -webkit-filter: grayscale(0);}
 
-img {
-    /* 图片变成黑白色*/
-    -webkit-filter: grayscale(0);
-}
 /*设置链接样式*/
-a{text-decoration: none;outline: none;cursor: pointer; color:black}
-a:focus {outline: none;}
-a:link {outline: none;}
-a:active {outline: none;}
-a:visited {outline: none;}
-a:hover {outline: none; color: #f40}
+a{ text-decoration: none; outline: none; cursor: pointer; color:black }
+a:focus { outline: none; }
+a:link { outline: none; }
+a:active { outline: none; }
+a:visited { outline: none; }
+a:hover { outline: none; color: #f40 }
 
