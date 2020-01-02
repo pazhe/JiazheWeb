@@ -109,6 +109,7 @@ function silder() {
     play();
     //原生轮播图 start
 }
+
 //原生轮播图 end
 
 function promo() {

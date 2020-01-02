@@ -17,7 +17,7 @@ div{ /*margin:0 auto;*/ display: block; overflow:hidden; }
 ol, ul {list-style: none}
 li { float: left;}
 .h { color: #ff5000 !important;}
-.bd { width: 75%; margin: 0 auto; position: relative;}
+.bd { width: 76%; margin: 0 auto; position: relative;}
 
 /* 图片变成黑白色*/
 img { -webkit-filter: grayscale(0);}
@@ -30,3 +30,17 @@ a:active { outline: none; }
 a:visited { outline: none; }
 a:hover { outline: none; color: #f40 }
 
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.J_Module {
+    min-height: 0;
+    /*background-color: #FFF;*/
+}

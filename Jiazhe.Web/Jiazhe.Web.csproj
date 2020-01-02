@@ -101,6 +101,7 @@
     <Content Include="Controls\J_Promo.ascx" />
     <Content Include="Controls\J_Service.ascx" />
     <Content Include="Controls\J_Tmall.ascx" />
+    <Content Include="Controls\J_Tmall_SubColumn.ascx" />
     <Content Include="Controls\J_Top.ascx" />
     <Content Include="DataBase\Daocaoman\DaocaomanSqlInsert.sql" />
     <Content Include="DataBase\Daocaoman\DaocaomanSqlServer.sql" />
@@ -114,6 +115,16 @@
     <Content Include="DataBase\JiazheWebDataBase\Services.sql" />
     <Content Include="DataBase\JiazheWebDataBase\TaokeServices.sql" />
     <Content Include="DataBase\JiazheWebDataBase\WexinServices.sql" />
+    <Content Include="Images\Banners\1500x300\1.jpg" />
+    <Content Include="Images\Banners\1500x300\2.jpg" />
+    <Content Include="Images\Banners\1500x300\3.jpg" />
+    <Content Include="Images\Banners\1500x300\4.jpg" />
+    <Content Include="Images\Banners\1500x300\5.jpg" />
+    <Content Include="Images\Banners\1500x300\6.jpg" />
+    <Content Include="Images\Banners\1500x300\7.jpg" />
+    <Content Include="Images\Banners\1500x300\8.jpg" />
+    <Content Include="Images\Banners\1500x300\9.jpg" />
+    <Content Include="Images\Banners\160x200\01.jpg" />
     <Content Include="Images\Banners\160x224\1.jpg" />
     <Content Include="Images\Banners\160x224\2.jpg" />
     <Content Include="Images\Banners\160x224\3.jpg" />
@@ -131,6 +142,10 @@
     <Content Include="Images\Banners\280x700\4.jpg" />
     <Content Include="Images\Banners\280x700\5.jpg" />
     <Content Include="Images\Banners\30x120\1.jpg" />
+    <Content Include="Images\Banners\535x98\1.jpg" />
+    <Content Include="Images\Banners\535x98\2.jpg" />
+    <Content Include="Images\Banners\535x98\3.jpg" />
+    <Content Include="Images\Banners\535x98\4.jpg" />
     <Content Include="Images\Banners\70x880\1.jpg" />
     <Content Include="Images\Banners\70x880\2.jpg" />
     <Content Include="Images\Banners\70x880\3.jpg" />
@@ -216,6 +231,13 @@
     </Compile>
     <Compile Include="Controls\J_Tmall.ascx.designer.cs">
       <DependentUpon>J_Tmall.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\J_Tmall_SubColumn.ascx.cs">
+      <DependentUpon>J_Tmall_SubColumn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_Tmall_SubColumn.ascx.designer.cs">
+      <DependentUpon>J_Tmall_SubColumn.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\J_Top.ascx.cs">
       <DependentUpon>J_Top.ascx</DependentUpon>
@@ -336,6 +358,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Home\" />
+    <Folder Include="Images\Banners\1240x98\" />
     <Folder Include="Images\Banners\70x315\" />
   </ItemGroup>
   <ItemGroup>

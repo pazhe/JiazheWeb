@@ -8,6 +8,8 @@
 <%@ Register Src="~/Controls/J_Promo.ascx" TagPrefix="uc" TagName="J_Promo" %>
 <%@ Register Src="~/Controls/J_Tmall.ascx" TagPrefix="uc" TagName="J_Tmall" %>
 <%@ Register Src="~/Controls/J_Promo1.ascx" TagPrefix="uc" TagName="J_Promo1" %>
+<%@ Register Src="~/Controls/J_Tmall_SubColumn.ascx" TagPrefix="uc" TagName="J_Tmall_SubColumn" %>
+
 
 <!DOCTYPE html>
 
@@ -46,7 +48,11 @@
                         <uc:J_Promo runat="server" id="J_Promo" />
 
                     </div>
-                    <div class="tbh-tmall J_Module"><%--轮播下面广告--%><uc:J_Tmall runat="server" id="J_Tmall" /></div>
+                    <div class="tbh-tmall J_Module clearfix">
+                        <%--轮播下面广告--%>
+                        <uc:J_Tmall runat="server" id="J_Tmall" />
+                        <uc:J_Tmall_SubColumn runat="server" id="J_Tmall_SubColumn" />
+                    </div>
                 </div>
                 <div class="sub-column" style="display:none;">中间旁边广告</div>
                 <div class="col-right" style="display:block;" >右侧模块</div>
@@ -63,6 +69,7 @@
 
 
   </form>
+
 
 </body>
 </html>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
@@ -31,7 +32,21 @@ namespace Jiazhe.Web
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            
+            string oldUrl = HttpContext.Current.Request.RawUrl;
+
+            string pattern = @"^(.+)default/(/d+)/.aspx(/?.*)*$";
+
+            string replace = "$1default.aspx?id=$2";
+
+            if (Regex.IsMatch(oldUrl, pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled))
+
+            {
+
+                string newUrl = Regex.Replace(oldUrl, pattern, replace, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+                this.Context.RewritePath(newUrl);
+
+            }
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

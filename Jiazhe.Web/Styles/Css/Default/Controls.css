@@ -292,7 +292,7 @@ display:inline;*/
     height: 512px;
     border: 0px solid;*/
 }
-.sub-column {
+.sub-column1 {
     /*position: relative;*/
     float: right;
     position: absolute;
@@ -357,6 +357,7 @@ display:inline;*/
 .tbh-promo {
     width: 100%;
     height: 280px;
+    background-color:none;
     /*position: relative;*/
 }
 .promo {
@@ -493,10 +494,12 @@ bottom:-280px;
 
 .tmall {
     position: relative;
-    width: 520px;
+    width: 650px;
     height: 230px;
     margin-top: 1px;
     overflow: hidden;
+    background-color: white;
+    /*float: left;*/
 }
 .tmall-hd {
     font-size: 14px;
@@ -535,3 +538,69 @@ bottom:-280px;
     font-style: normal;
     color: #ff1648;
 }
+
+.tmall-bd .tmall-list .logos {
+    position: relative;
+    height: 201px;
+    visibility: visible;
+    float: left;
+    overflow: hidden;
+}
+.tmall-bd .tmall-list .logos a {
+    float: left;
+    *display: inline;
+    width: 129px;
+    height: 57px;
+    text-align: center;
+    border: 0;
+    padding: 5px 0;
+    border-right: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    overflow: hidden;
+    line-height:68px;
+}
+.tmall-bd .tmall-list .logos img {
+    float: left;
+    /*margin-top: -2px;
+    margin-left: 5px;*/
+    margin:8px 22px;
+    width: 84px;
+    height: auto;
+    display: block;
+}   
+ 
+
+/*J_Tmall end*/
+
+.tbh-tmall {
+position:relative;
+}
+.sub-column {
+    float: left;
+    width: 324px;
+    /*height: 512px;*/
+    margin-right: 0px;
+    margin-top: 0px;
+    position: absolute;
+    left: 660px;
+    top: 0px;
+}
+.hb-tanx-down {
+    margin-top: 1px;
+    height: 230px;
+}
+.hd-tanx {
+    overflow: hidden;
+    height: 280px;
+    background-color: #FFF;
+}
+.hb-tanx-down h5 {
+    font-size: 12px;
+    font-weight: 400;
+    background: #f1f1f1;
+    color: #a1a1a1;
+    line-height: 24px;
+    padding-top: 6px;
+}
+
+/*J_Tmall_SubColumn end*/
