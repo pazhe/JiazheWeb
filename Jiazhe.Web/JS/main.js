@@ -118,6 +118,10 @@ function promo() {
     var prev = document.getElementById('promo-prev');
     var next = document.getElementById('promo-next');
     var buttons = document.getElementById('promo-buttons').getElementsByTagName('li');
+
+    var service = document.getElementById('service').offsetWidth;
+    var colRight=document.getElementById('col-right').offsetWidth;
+    console.log("service:" + service + "colRight:" + colRight);
     var timerHandler = 5000;
 
     var index = 0;
@@ -175,7 +179,7 @@ function promo() {
         var percentage = (mainInner.offsetWidth / main.offsetWidth).toFixed(2);
         var timer = setInterval(function () {
             maxWidth = document.body.offsetWidth;
-            core.style.maxWidth = maxWidth * percentage - 200 - 280 + "px";
+            core.style.maxWidth = maxWidth * percentage - service - colRight-20 + "px";
         }, 50)
         console.log(percentage);
     }

@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="tmall-ft">
-        <div class="tmall-opt J_TmallOpt a-all sld-ft-opt">
+        <div class="tmall-opt J_TmallOpt a-all sld-ft-opt" style="display:none">
 		    <div style="position:absolute; top: 120px; left: -0.5px; display: block; width: 20px; height:30px;" id="cc-lm-prevItem">
                 <a id="tmall-prev" class="J_Prev prev a-all"><i class="s-prev tb-ifont"></i></a>
 		    </div>
@@ -43,6 +43,15 @@
                 <a id="tmall-next" class="J_Next next a-all"><i class="s-next tb-ifont"></i></a>
 		    </div>
         </div>
+
+        <ul class="tmall-nav">
+            <li class=""> <a>1</a></li>
+            <li class=""><a >2</a></li>
+            <li class=""><a>3</a></li>
+            <li class="selected"><a>4</a></li>
+            <li class=""><a>5</a></li>
+            <li class=""><a>6</a></li>
+        </ul>
 
     </div>
 </div>

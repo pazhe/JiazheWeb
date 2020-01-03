@@ -92,5 +92,50 @@ namespace Jiazhe.Web {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::Jiazhe.Web.Controls.J_Tmall_SubColumn J_Tmall_SubColumn;
+        
+        /// <summary>
+        /// J_Member1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Jiazhe.Web.Controls.J_Member J_Member1;
+        
+        /// <summary>
+        /// J_Tipoff1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Jiazhe.Web.Controls.J_Tipoff J_Tipoff1;
+        
+        /// <summary>
+        /// J_Notice1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Jiazhe.Web.Controls.J_Notice J_Notice1;
+        
+        /// <summary>
+        /// J_Conve1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Jiazhe.Web.Controls.J_Conve J_Conve1;
+        
+        /// <summary>
+        /// J_App1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Jiazhe.Web.Controls.J_App J_App1;
     }
 }

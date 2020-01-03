@@ -97,9 +97,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\J_App.ascx" />
+    <Content Include="Controls\J_Conve.ascx" />
+    <Content Include="Controls\J_Member.ascx" />
     <Content Include="Controls\J_Nav.ascx" />
+    <Content Include="Controls\J_Notice.ascx" />
     <Content Include="Controls\J_Promo.ascx" />
     <Content Include="Controls\J_Service.ascx" />
+    <Content Include="Controls\J_Tipoff.ascx" />
     <Content Include="Controls\J_Tmall.ascx" />
     <Content Include="Controls\J_Tmall_SubColumn.ascx" />
     <Content Include="Controls\J_Top.ascx" />
@@ -141,7 +146,27 @@
     <Content Include="Images\Banners\280x700\3.jpg" />
     <Content Include="Images\Banners\280x700\4.jpg" />
     <Content Include="Images\Banners\280x700\5.jpg" />
+    <Content Include="Images\Banners\30x120\01.jpg" />
+    <Content Include="Images\Banners\30x120\02.jpg" />
+    <Content Include="Images\Banners\30x120\03.jpg" />
+    <Content Include="Images\Banners\30x120\04.jpg" />
+    <Content Include="Images\Banners\30x120\05.jpg" />
+    <Content Include="Images\Banners\30x120\05.png" />
+    <Content Include="Images\Banners\30x120\06.jpg" />
+    <Content Include="Images\Banners\30x120\06.png" />
+    <Content Include="Images\Banners\30x120\07.jpg" />
+    <Content Include="Images\Banners\30x120\07.png" />
+    <Content Include="Images\Banners\30x120\08.jpg" />
+    <Content Include="Images\Banners\30x120\09.jpg" />
     <Content Include="Images\Banners\30x120\1.jpg" />
+    <Content Include="Images\Banners\30x120\1.png" />
+    <Content Include="Images\Banners\30x120\10.jpg" />
+    <Content Include="Images\Banners\30x120\11.jpg" />
+    <Content Include="Images\Banners\30x120\12.jpg" />
+    <Content Include="Images\Banners\30x120\13.jpg" />
+    <Content Include="Images\Banners\30x120\2.png" />
+    <Content Include="Images\Banners\30x120\3.png" />
+    <Content Include="Images\Banners\30x120\4.png" />
     <Content Include="Images\Banners\535x98\1.jpg" />
     <Content Include="Images\Banners\535x98\2.jpg" />
     <Content Include="Images\Banners\535x98\3.jpg" />
@@ -187,15 +212,45 @@
     <Content Include="Styles\Css\Weixin\Admin\AdminNavigation.css" />
     <Content Include="Styles\Css\Default\Default.css" />
     <Content Include="Styles\Css\Manager\FavoriteItems.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\J_App.ascx.cs">
+      <DependentUpon>J_App.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_App.ascx.designer.cs">
+      <DependentUpon>J_App.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\J_Conve.ascx.cs">
+      <DependentUpon>J_Conve.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_Conve.ascx.designer.cs">
+      <DependentUpon>J_Conve.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\J_Member.ascx.cs">
+      <DependentUpon>J_Member.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_Member.ascx.designer.cs">
+      <DependentUpon>J_Member.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\J_Nav.ascx.cs">
       <DependentUpon>J_Nav.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\J_Nav.ascx.designer.cs">
       <DependentUpon>J_Nav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\J_Notice.ascx.cs">
+      <DependentUpon>J_Notice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_Notice.ascx.designer.cs">
+      <DependentUpon>J_Notice.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\J_Promo.ascx.cs">
       <DependentUpon>J_Promo.ascx</DependentUpon>
@@ -224,6 +279,13 @@
     </Compile>
     <Compile Include="Controls\J_SuperBanner.ascx.designer.cs">
       <DependentUpon>J_SuperBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\J_Tipoff.ascx.cs">
+      <DependentUpon>J_Tipoff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\J_Tipoff.ascx.designer.cs">
+      <DependentUpon>J_Tipoff.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\J_Tmall.ascx.cs">
       <DependentUpon>J_Tmall.ascx</DependentUpon>
